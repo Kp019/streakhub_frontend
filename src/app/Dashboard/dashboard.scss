@@ -1,0 +1,110 @@
+.Dashboard{
+    width: 100%;
+    height: 100vh;
+    background-color: #040013;
+}
+
+.NavbarDash
+{
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 100%;
+    
+    .action-buttons {
+        display: flex;
+        gap: 20px;
+        
+        .action-button {
+            height: 30px;
+        }
+
+    }
+
+    .logo-img{
+        box-sizing: content-box;
+        // margin: 10px;
+    }
+
+}
+
+.ContentUpper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    .dateBox {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #140040;
+        width: min-content;
+        padding: 20px 10px;
+        border-radius: 20px;
+
+        .date {
+            font-size: 50px;
+            // font-weight: 600;
+            color: #fff;
+        }
+
+        .month {
+            font-size: 40px;
+        }
+
+        .year {
+            font-size: 50px;
+        }
+    }
+
+    .streakBoxes {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        // gap: 20px;
+        .techStreaks {
+            display: flex;
+            // flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            // background-color: #140040;
+            width: min-content;
+            padding: 20px 10px;
+            border-radius: 20px;
+            
+            .techStreak{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                // background-color: #04ffff;
+                padding: 10px;
+                .streakCount {
+                    font-size: 50px;
+                    color: #fff;
+                }
+                
+                .streakPlatform {
+                    font-size: 14px;
+                    color: #fff;
+                }
+
+            }
+
+            .personalStreak {
+                background-color: #140040;
+                border-radius: 15px;
+                
+            }
+
+       }
+       .addNew {
+        box-sizing: content-box;
+        padding: 20px;
+        // font-size: 80px;
+        // background-color: #140040;
+       }
+    }
+}
