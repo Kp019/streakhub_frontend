@@ -7,7 +7,7 @@ import Foot from './Foot'
 
 export default function Home() {
   return (
-      <div>
+      <div className='bg-gradient-to-b from-[#000] to-[#180248]'>
         <Navbar/>
         <Hero/>
         <About/>
