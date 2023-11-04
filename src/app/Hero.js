@@ -10,7 +10,7 @@ function Hero() {
             <button href="google.com">Login</button>
             <button>Dashboard</button>
         </div>
-        <Image src="/Group4.png" width={500} height={500} alt="" />
+        <Image src="/Group4.png" width={1000} height={1000} alt="" />
     </div>
   )
 }
