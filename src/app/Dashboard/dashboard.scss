@@ -2,13 +2,16 @@
 .Dashboard{
     min-height: 100vh;
     width: 100%;
+    // width: max-content;
     height: 100%;
-    background-color: #040013;
+    // background: linear-gradient()
+    background: linear-gradient(180deg, #050015 0%, #110135 48.96%, #180854 100%);
+    
+    padding: 35px;
 }
 
 .NavbarDash
 {
-    padding: 20px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -123,7 +126,7 @@
     .streakData {
         // find the inverted image
         filter: invert(100%);
-        
+        height: 170px;
 
     }
 }
