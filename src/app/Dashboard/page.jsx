@@ -12,6 +12,7 @@ const dashboard = () => {
     <div className="Dashboard">
       <NavbarDash/>
       <ContentUpper/>
+      <ContentLower/>
     </div>
   )
 }
@@ -50,7 +51,8 @@ const ContentUpper = () => {
             <p className="streakCount">35</p>
             <p className="streakPlatform">GitHub</p>
           </div>
-          <div className="addNew">+</div>
+          <Image className='addNew' src='/Plus.png' width={30} height={30}></Image>
+
         </div>
         <div className="techStreaks">
           <div className="techStreak personalStreak">
@@ -63,10 +65,19 @@ const ContentUpper = () => {
             <p>Hours</p>
             <p className="streakPlatform">Learn</p>
           </div>
-            <Image src='/Plus.png' width={100} height={100}></Image>
+            <Image className='addNew' src='/Plus.png' width={30} height={30}></Image>
           
         </div>
       </div>
+    </div>
+  );
+}
+
+const ContentLower = () => {
+  return (
+    <div className="ContentLower">
+      {/* <Image className='laptopImg' src='/laptopWithStuffs.png' width={600} height={600}/> */}
+      <img src="https://ghchart.rshah.org/FFE96D/technodumb" className='streakData' alt="Name Your Github chart"></img>
     </div>
   );
 }
