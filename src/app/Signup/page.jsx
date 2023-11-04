@@ -13,7 +13,6 @@ function Signup() {
   const handleSignup = async (event) => {
     event.preventDefault();
 
-    // Create a data object with the form values
     const data = {
       name: name,
       username: username,
@@ -21,7 +20,6 @@ function Signup() {
     };
 
     try {
-      // Make an HTTP POST request to your backend route
       const response = await axios.post(
         "https://streakhub-backend.onrender.com/register",
         data
