@@ -8,14 +8,14 @@ import AddDetails from './AddDetails/page'
 
 export default function Home() {
   return (
-      // <div>
-      //   <Navbar/>
-      //   <Hero/>
-      //   <About/>
-      //   <Features/>
-      //   <Feat/>
-      //   <Foot/>
-      // </div>
-      <AddDetails/>
+      <div>
+        <Navbar/>
+        <Hero/>
+        <About/>
+        <Features/>
+        <Feat/>
+        <Foot/>
+      </div>
+      //<AddDetails/>
   )
 }
