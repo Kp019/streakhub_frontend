@@ -1,7 +1,8 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 
-function login() {
+function signup() {
   return (
     <div className="flex mx-52">
       <div className="flex flex-col items-center justify-center gap-20 mt-20">
@@ -11,8 +12,8 @@ function login() {
       <div>
         <div>
           <div>
-            <h1>Welcome Back Homie!</h1>
-            <p>Lets see your progress.</p>
+            <h1>Get Started Now !</h1>
+            <p>Create an Account</p>
           </div>
           <div>
             <form>
@@ -24,10 +25,14 @@ function login() {
                 <label for="fname">Password</label>
                 <input className="text-black" type="text" />
               </div>
-              <input type="submit" value="Take me in!" />
+              <div className="flex flex-col">
+                <label for="fname">Confirm Password</label>
+                <input className="text-black" type="text" />
+              </div>
+              <input type="submit" value="Let's Go" />
             </form>
             <p>
-              New to streakx <a href="./Signup">Signup</a>
+              already signedup<span>log in</span>
             </p>
           </div>
         </div>
@@ -36,4 +41,4 @@ function login() {
   );
 }
 
-export default login;
+export default signup;
