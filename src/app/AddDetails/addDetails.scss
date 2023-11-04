@@ -1,0 +1,102 @@
+.AddDetails {
+    min-height: 100vh;
+    width: 100%;
+    // width: max-content;
+    height: 100%;
+    // background: linear-gradient()
+    background: linear-gradient(180deg, #050015 0%, #110135 48.96%, #180854 100%);
+    
+    padding: 35px;
+    .NavbarDash
+    {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        width: 100%;
+        
+        .action-buttons {
+            display: flex;
+            gap: 20px;
+            
+            .action-button {
+                height: 30px;
+            }
+
+        }
+
+        .logo-img{
+            box-sizing: content-box;
+            // margin: 10px;
+        }
+
+    }
+
+}
+
+.Content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    .dateBox {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #140040;
+        width: min-content;
+        padding: 40px 20px;
+        border-radius: 20px;
+
+        .date {
+            font-size: 50px;
+            // font-weight: 600;
+            color: #fff;
+        }
+
+        .month {
+            font-size: 40px;
+        }
+
+        .year {
+            font-size: 50px;
+        }
+    
+
+    }
+
+    margin: 50px 0;
+
+    .inputFormDiv {
+        padding: 40px;
+        background-color: #140040;
+        border-radius: 20px;
+
+        .inputForm {
+            display: flex;
+            flex-direction: column;
+
+            .inputField {
+                background-color: transparent;
+                border-bottom: #fff solid 1px;
+                font-size: 20px;
+                margin: 10px 0;
+                // line-height: 25px;
+            }
+            .inputField:focus {
+                outline: none;
+            }
+
+            .submitButton {
+                // text-align: center;
+                align-self: center;
+                border-radius: 20px;
+                margin: 20px;
+                box-sizing: content-box;
+                padding: 5px 40px;
+                background-color: #3B06A3;
+                width: min-content;
+            }
+        }
+    }
+}
