@@ -8,7 +8,7 @@ import AddDetails from './AddDetails/page'
 
 export default function Home() {
   return (
-      <div>
+      <div className="bg-gradient-to-b from-[#040013] to-[#11033d]">
         <Navbar/>
         <Hero/>
         <About/>
