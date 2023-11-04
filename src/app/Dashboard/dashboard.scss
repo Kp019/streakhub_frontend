@@ -2,13 +2,16 @@
 .Dashboard{
     min-height: 100vh;
     width: 100%;
+    // width: max-content;
     height: 100%;
-    background-color: #040013;
+    // background: linear-gradient()
+    background: linear-gradient(180deg, #050015 0%, #110135 48.96%, #180854 100%);
+    
+    padding: 35px;
 }
 
 .NavbarDash
 {
-    padding: 20px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -92,21 +95,27 @@
                     font-size: 14px;
                     color: #fff;
                 }
-
+                
+                .fire {
+                    background-image: url('/fire.png');
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                }
+                
             }
-
+            
             .personalStreak {
                 background-color: #140040;
                 border-radius: 15px;
                 
             }
-
-       }
-       .addNew {
-        box-sizing: content-box;
-        padding: 20px;
-        background-color: #140040;
-        margin: 0 20px;
+            
+        }
+        .addNew {
+            box-sizing: content-box;
+            padding: 20px;
+            background-color: #140040;
+            margin: 0 20px;
         border-radius: 20px;
         // font-size: 80px;
         // background-color: #140040;
@@ -123,7 +132,7 @@
     .streakData {
         // find the inverted image
         filter: invert(100%);
-        
+        height: 170px;
 
     }
 }
