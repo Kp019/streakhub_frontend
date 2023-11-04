@@ -42,13 +42,13 @@ const ContentUpper = () => {
         <p className="year">2023</p>
       </div>
       <div className="streakBoxes">
-        <div className="techStreaks">
+        <div className=" fire techStreaks">
           <div className="techStreak">
-            <p className="streakCount">35</p>
+            <p className="fire streakCount">35</p>
             <p className="streakPlatform">GitHub</p>
           </div>
           <div className="techStreak">
-            <p className="streakCount">35</p>
+            <p className="fire streakCount">35</p>
             <p className="streakPlatform">GitHub</p>
           </div>
           <Image className='addNew' src='/Plus.png' width={30} height={30}></Image>
