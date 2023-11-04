@@ -31,7 +31,7 @@ function Signup() {
       console.log(response.data);
       let windowplace = "./Adddetails/" + response.data[0].uid;
       console.log(windowplace);
-      // window.location.href = windowplace;
+      window.location.href = windowplace;
     } catch (error) {
       // Handle any errors (e.g., network error, server error)
       console.error(error);
