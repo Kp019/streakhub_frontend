@@ -1,5 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
+import Link from 'next/link'
 import { ImageConfigContext } from 'next/dist/shared/lib/image-config-context.shared-runtime'
 
 function Navbar() {
@@ -11,7 +12,9 @@ function Navbar() {
       </ul>
       <img src={Image} alt=''/>
       <ul className='flex gap-5'>
+        <Link href='/Dashboard' alt=''>
         <li>DASHBOAD</li>
+        </Link>
         <li>CONTACT</li>
       </ul>
     </div>
