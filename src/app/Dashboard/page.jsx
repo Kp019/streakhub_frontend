@@ -4,15 +4,15 @@ import './dashboard.scss'
 // react icons
 import { MdOutlineMenu } from 'react-icons/md'
 import { IoPersonCircle } from 'react-icons/io5'
-
+import bg from '../../../public/Background.png'
 
 const dashboard = () => {
   return (
     // <div className='NavbarDash'>dashboard</div>
     <div className="Dashboard">
-      <NavbarDash/>
-      <ContentUpper/>
-      <ContentLower/>
+        <NavbarDash/>
+        <ContentUpper/>
+        <ContentLower/>
     </div>
   )
 }
@@ -77,7 +77,7 @@ const ContentLower = () => {
   return (
     <div className="ContentLower">
       {/* <Image className='laptopImg' src='/laptopWithStuffs.png' width={600} height={600}/> */}
-      <img src="https://ghchart.rshah.org/FFE96D/technodumb" className='streakData' alt="Name Your Github chart"></img>
+      <img src="https://ghchart.rshah.org/0017A3/technodumb" className='streakData' alt="Name Your Github chart"></img>
     </div>
   );
 }
