@@ -102,11 +102,16 @@ const ContentUpper = ({ data, todolist }) => {
       </div>
       <div className="streakBoxes">
         <div className=" fire techStreaks">
-          <div className="techStreak">
+          <div className="bg-yellow-200 techStreak">
             <p className="fire streakCount">{data[0].github_streak}</p>
             <p className="streakPlatform">GitHub</p>
           </div>
-          <div className="techStreak">
+          <div
+            className={`techStreak ${
+              data[0].wakatime_goal_achieved ? "bg-yellow-200" : ""
+            }`}
+          >
+            {" "}
             <p className="fire streakCount">{data[0].wakatime_streak}</p>
             <p className="streakPlatform">VScode</p>
           </div>
@@ -119,15 +124,31 @@ const ContentUpper = ({ data, todolist }) => {
           ></Image>
         </div>
         <div className="techStreaks">
-          <div className="techStreak personalStreak">
-            <p className="streakCount">{todolist[0].streak}</p>
+          <div
+            className={`techStreak personalStreak ${
+              todolist[0].checked ? "bg-yellow-200" : ""
+            } `}
+          >
+            <p className="streakCount">
+              {todolist[0].streak ? todolist[0].streak : "NULL"}
+            </p>
             {/* <p>Hours</p> */}
-            <p className="streakPlatform">{todolist[0].name}</p>
+            <p className="streakPlatform">
+              {todolist[0].name ? todolist[0].name : "NULL"}
+            </p>
           </div>
-          <div className="techStreak personalStreak">
-            <p className="streakCount">{todolist[1].streak}</p>
+          <div
+            className={`techStreak personalStreak ${
+              todolist[1].checked ? "bg-yellow-200" : ""
+            } `}
+          >
+            <p className="streakCount">
+              {todolist[1].streak ? todolist[1].streak : "NULL"}
+            </p>
             {/* <p>Hours</p> */}
-            <p className="streakPlatform">{todolist[1].name}</p>
+            <p className="streakPlatform">
+              {todolist[1].name ? todolist[1].name : "NULL"}
+            </p>
           </div>
           <Image
             className="addNew"
