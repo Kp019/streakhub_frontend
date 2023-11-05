@@ -27,7 +27,7 @@ function Signup() {
 
       // Handle the response (you can log it or show a message to the user)
       console.log(response.data);
-      let windowplace = "./Adddetails/" + response.data[0].uid;
+      let windowplace = "./AddDetails/" + response.data[0].uid;
       console.log(windowplace);
       window.location.href = windowplace;
     } catch (error) {
