@@ -7,7 +7,7 @@ function Navbar() {
   // <Link href='/dashboard'>
 
   return (
-    <div className='flex m-14 gap-14 items-center justify-center'>
+    <div className='flex p-14 gap-14 items-center justify-center'>
       <ul className='flex gap-10 '>
         <li>ABOUT</li>
         <li>COMMUNITY</li>
