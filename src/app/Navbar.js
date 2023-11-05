@@ -10,8 +10,10 @@ function Navbar() {
     <div className='flex p-14 gap-14 items-center justify-center'>
       <ul className='flex gap-10 '>
         <li>ABOUT</li>
+        <Link href='/Community'>
         <li>COMMUNITY</li>
-      </ul>
+        </Link>      
+        </ul>
       <Image src="/logo.png" width={50} height={50} alt=''/>
       <ul className='flex gap-10'>
         <Link href='/Dashboard'>
