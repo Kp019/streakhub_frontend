@@ -1,7 +1,9 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import Image from "next/image";
 import { MdOutlineMenu } from "react-icons/md";
 import { IoPersonCircle } from "react-icons/io5";
+import axios from "axios";
 import "./addDetails.scss";
 
 export default function AddDetails({ params }) {
@@ -9,7 +11,7 @@ export default function AddDetails({ params }) {
   return (
     <div className="AddDetails">
       <NavbarDash />
-      <Content />
+      <Content pid={params} />
     </div>
   );
 }
@@ -28,7 +30,37 @@ const NavbarDash = () => {
   );
 };
 
-const Content = () => {
+const Content = (pid) => {
+  console.log("pid", pid.pid.id);
+  const [githubUsername, setGithubUsername] = useState("");
+  const [wakatimeAPI, setWakatimeAPI] = useState("");
+  const [wakatimeUsername, setWakatimeUsername] = useState("");
+  const [wakatimeGoal, setWakatimeGoal] = useState(0);
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+
+    // Create an object with the form data
+    const data = {
+      id: Number(pid.pid.id),
+      githubusername: githubUsername,
+      wakatime_api: wakatimeAPI,
+      setwakatimeusername: wakatimeUsername,
+      setwakatimegoal: wakatimeGoal,
+    };
+
+    try {
+      await axios.post(
+        "https://streakhub-backend.onrender.com/addcontent",
+        data
+      );
+      let windowurl = "/Dashboard/" + pid.pid.id;
+      window.location.href = windowurl;
+    } catch (error) {
+      console.error(error);
+      alert("Error submitting data. Please try again."); // Notify the user of the error
+    }
+  };
+
   return (
     <div className="Content">
       <div className="dateBox">
@@ -37,63 +69,51 @@ const Content = () => {
         <p className="year">2023</p>
       </div>
       <div className="inputFormDiv">
-        <form className="inputForm">
+        <form className="inputForm" onSubmit={handleSubmit}>
           <input
             type="text"
             placeholder="GitHub Username"
             name="githubUsername"
             className="inputField"
+            value={githubUsername}
+            onChange={(event) => {
+              setGithubUsername(event.target.value);
+            }}
           ></input>
           <input
             type="text"
             placeholder="Wakatime API"
             name="wakatimeAPI"
             className="inputField"
+            value={wakatimeAPI}
+            onChange={(event) => {
+              setWakatimeAPI(event.target.value);
+            }}
           ></input>
           <input
             type="text"
             placeholder="Wakatime Username"
             name="wakatimeUsername"
             className="inputField"
+            value={wakatimeUsername}
+            onChange={(event) => {
+              setWakatimeUsername(event.target.value);
+            }}
           ></input>
           <input
-            type="text"
+            type="Number"
             placeholder="Wakatime Goal (In hours)"
             name="wakatimeGoal"
             className="inputField"
+            value={wakatimeGoal}
+            onChange={(event) => {
+              setWakatimeGoal(event.target.value);
+            }}
           ></input>
 
           <button className="submitButton">Set!</button>
         </form>
       </div>
-      {/* <div className="streakBoxes">
-          <div className=" fire techStreaks">
-            <div className="techStreak">
-              <p className="fire streakCount">35</p>
-              <p className="streakPlatform">GitHub</p>
-            </div>
-            <div className="techStreak">
-              <p className="fire streakCount">35</p>
-              <p className="streakPlatform">GitHub</p>
-            </div>
-            <Image className='addNew' src='/Plus.png' width={30} height={30}></Image>
-  
-          </div>
-          <div className="techStreaks">
-            <div className="techStreak personalStreak">
-              <p className="streakCount">06</p>
-              <p>Hours</p>
-              <p className="streakPlatform">Learn</p>
-            </div>
-            <div className="techStreak personalStreak">
-              <p className="streakCount">06</p>
-              <p>Hours</p>
-              <p className="streakPlatform">Learn</p>
-            </div>
-              <Image className='addNew' src='/Plus.png' width={30} height={30}></Image>
-            
-          </div>
-        </div> */}
     </div>
   );
 };
