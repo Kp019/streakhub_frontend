@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import "../Dashboard/dashboard.scss";
+import "../Dashboard/[id]/dashboard.scss";
 import { MdOutlineMenu } from "react-icons/md";
 import { IoPersonCircle } from "react-icons/io5";
 

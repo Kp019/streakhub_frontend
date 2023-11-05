@@ -1,37 +1,37 @@
 // import React from 'react'
-import Image from 'next/image'
-import './dashboard.scss'
+import Image from "next/image";
+import "./dashboard.scss";
 // react icons
-import { MdOutlineMenu } from 'react-icons/md'
-import { IoPersonCircle } from 'react-icons/io5'
-import bg from '../../../public/Background.png'
+import { MdOutlineMenu } from "react-icons/md";
+import { IoPersonCircle } from "react-icons/io5";
+import bg from "../../../public/Background.png";
 
 const dashboard = () => {
   return (
     // <div className='NavbarDash'>dashboard</div>
     <div className="Dashboard">
-        <NavbarDash/>
-        <ContentUpper/>
-        <ContentLower/>
+      <NavbarDash />
+      <ContentUpper />
+      <ContentLower />
     </div>
-  )
-}
+  );
+};
 
-export default dashboard
+export default dashboard;
 
 const NavbarDash = () => {
-    return (
-        <nav className='NavbarDash'>
-          <div>
-            <Image className='logo-img' src='/Logo.png' width={50} height={50}/>
-          </div>
-          <div  className='action-buttons'>
-            <MdOutlineMenu size={30}/>
-            <IoPersonCircle size={30}/>
-          </div>
-        </nav>
-    );
-}
+  return (
+    <nav className="NavbarDash">
+      <div>
+        <Image className="logo-img" src="/Logo.png" width={50} height={50} />
+      </div>
+      <div className="action-buttons">
+        <MdOutlineMenu size={30} />
+        <IoPersonCircle size={30} />
+      </div>
+    </nav>
+  );
+};
 
 const ContentUpper = () => {
   return (
@@ -51,8 +51,12 @@ const ContentUpper = () => {
             <p className="fire streakCount">35</p>
             <p className="streakPlatform">GitHub</p>
           </div>
-          <Image className='addNew' src='/Plus.png' width={30} height={30}></Image>
-
+          <Image
+            className="addNew"
+            src="/Plus.png"
+            width={30}
+            height={30}
+          ></Image>
         </div>
         <div className="techStreaks">
           <div className="techStreak personalStreak">
@@ -65,19 +69,27 @@ const ContentUpper = () => {
             <p>Hours</p>
             <p className="streakPlatform">Learn</p>
           </div>
-            <Image className='addNew' src='/Plus.png' width={30} height={30}></Image>
-          
+          <Image
+            className="addNew"
+            src="/Plus.png"
+            width={30}
+            height={30}
+          ></Image>
         </div>
       </div>
     </div>
   );
-}
+};
 
 const ContentLower = () => {
   return (
     <div className="ContentLower">
       {/* <Image className='laptopImg' src='/laptopWithStuffs.png' width={600} height={600}/> */}
-      <img src="https://ghchart.rshah.org/0017A3/technodumb" className='streakData' alt="Name Your Github chart"></img>
+      <img
+        src="https://ghchart.rshah.org/0017A3/technodumb"
+        className="streakData"
+        alt="Name Your Github chart"
+      ></img>
     </div>
   );
-}
+};
